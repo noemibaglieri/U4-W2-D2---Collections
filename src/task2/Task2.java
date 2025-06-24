@@ -8,7 +8,12 @@ public class Task2 {
         orderedList(7);
 
         ArrayList<Integer> listOfNumbers = new ArrayList<>(Arrays.asList(5, 6, 8, 7, 9, 1, 2));
+
         randomList(listOfNumbers);
+
+        oddOrEvenList(listOfNumbers, true);
+        System.out.println();
+        oddOrEvenList(listOfNumbers, false);
 
     }
 
@@ -29,5 +34,19 @@ public class Task2 {
         System.out.println(list);
     }
 
+    static void oddOrEvenList(ArrayList<Integer> list, boolean value) {
+
+        for (int i = 0; i < list.size(); i++) {
+
+            int num = list.get(i);
+
+            if (value && num % 2 == 0) {
+                System.out.println(num);
+
+            } else if (!value && num % 2 != 0) {
+                System.out.println(num);
+            }
+        }
+    }
 
 }
